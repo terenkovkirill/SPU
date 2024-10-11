@@ -1,0 +1,10 @@
+push 30             1   30
+push 70             2   
+add ;
+push 80
+push 60
+sub ;
+div ;
+out ;
+hlt ;
+
