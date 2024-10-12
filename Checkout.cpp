@@ -91,19 +91,20 @@ StackErr_t StackDump(struct Stack_t *ad_stack, const char* filename, const char*
                      "  called from %s : %d \n"
                      ON_DEBUG("  name %s born at %s : %d \n")
                      "  { \n"
-                     "      THE LEFT_CANARY_OF_THE_STACK_EQUALS = %llx \n"
-                     "      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = %llx \n"
+                     "      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = %llu \n"
+                     "      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = %llu \n"
                      "      capacity = %d \n"
                      "      size = %d \n"
-                     "      data[0x%p] = %d \n"
-                     "      THE LEFT_CANARY_OF_THE_DATA_EQUALS = %llx \n"
-                     "      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = %llx \n"
+                     "      data[0x%p] \n"
+                     "      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = %llu \n"
+                     "      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = %llu \n"
                      "      { \n", ad_stack, file, line, ON_DEBUG(ad_stack->name, ad_stack->file, ad_stack->line,) \
                                    ad_stack->c1, ad_stack->c2, ad_stack->capacity, ad_stack->size, \
                                    ad_stack->data, *(ad_stack->data - 1), *(ad_stack->data + ad_stack->capacity));
     
-    for (int i = 0; i < capacity; i ++) {
-        if (ad_stack->data[i] != POISON_VALUE_FOR_DATA) 
+    for (int i = 0; i < ad_stack->capacity; i ++) 
+    {
+        if (ad_stack->data[i] != POIZON_VALUE_FOR_DATA) 
             fprintf(fileptr, "          *[i] = %g \n", ad_stack->data[i]);
         else
             fprintf(fileptr, "           [i] = %g (POISON) \n", ad_stack->data[i]);
