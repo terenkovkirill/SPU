@@ -1,61 +1,95 @@
 #include <TXLib.h>
 #include <stdio.h>
 #include <string.h>
+#include <assert.h>
+
+#include "Stack.h"
+#include "Checkout.h"
+#include "Enum.h"
+
+void SPU(const char* readfile, const char* log_file);
 
 int main(int argc, const char* argv[])  //файлы для считывания и записи в dump
 {
+    if (argc != 3) {
+        printf("Erroneous number of elements");
+    }
+
     SPU(argv[1], argv[2]);
+    return 0;
 }
 
-void SPU(const char* readfile, const char* logfile)
+void SPU(const char* readfile, const char* logfile)   //ПЕреименовать функцию
 {
     Stack_t stk = {};
 
-    StackCtor(&stk, 2, argv[2]);
+    StackCtor(&stk, 2, logfile);
 
-    FILE* read_file = fopen(argv[1], "wb");
-    FILE* log_file = fopen(argv[2], "wb");
+    FILE* read_file = fopen(readfile, "r");
 
     while(1)
     {
-        char cmd[50] = "";
-        fscanf(read_file, "%s", cmd);
+        int command = 0;
+        fscanf(read_file, "%c \n", &command);
 
-
-        if (strcmp(cmd, "push") == 0) {
-            int arg = 0;
-            fscanf("%d", &arg);
-            StackPush(&stk, arg);
-        }
+        switch (command) {
+            case PUSH: {
+                StackElem_t arg = 0;
+                fscanf(read_file, "%c", &arg);
+                StackPush(&stk, arg);
+                break;
         
-        else if (strcmp(cmd, "sub") == 0) {
-            int value1, value2;
-            StackPop(&stk, &value1, log_file);
-            StackPop(&stk, &value2, log_file);
-            StackPush(&stk, value1 - value2, log_file);
+            }
+
+            case SUB: {
+                StackElem_t value1, value2;
+                StackPop(&stk, &value1);
+                StackPop(&stk, &value2);
+                StackPush(&stk, value1 - value2);
+                break;
+            }
+
+            case ADD: {
+                StackElem_t value1, value2;
+                StackPop(&stk, &value1);
+                StackPop(&stk, &value2);
+                StackPush(&stk, value1 + value2);
+                break;
+            }
+            
+            case MUL: {
+                 StackElem_t value1, value2;
+                StackPop(&stk, &value1);
+                StackPop(&stk, &value2);
+                StackPush(&stk, value1 * value2);
+                break;
+            }
+
+            case OUTPUT: {
+                StackElem_t value = 0;
+                StackPop(&stk, &value);
+                printf("%u", value);
+            }
+            
+            case HLT:
+                break;
+
+            default: 
+                printf("SNTXERR: %с \n", command);
+                break;      
         }
 
-        else if (strcmp(cmd, "add") == 0) {
-            int value1, value2;
-            StackPop(&stk, &value1, log_file);
-            StackPop(&stk, &value2, log_file);
-            StackPush(&stk, value1 + value2, log_file);
-        }
-
-        else if (strcmp(cmd, "mul") == 0) {
-            int value1, value2;
-            StackPop(&stk, &value1, log_file);
-            StackPop(&stk, &value2, log_file);
-            StackPush(&stk, value1 * value2, log_file);
-        }
-
-        else if (strcmp(cmd, "hlt") == 0) {
-            break;
-        }
-
-        else {
-            printf("SNTXERR", "%s \n", cmd);
-        }
+        PrintStack(&stk);
     }
+}
 
+
+void PrintStack(struct Stack_t *ad_stack)
+{
+    assert(ad_stack != NULL);
+    for (int i  = 0; i < ad_stack->size; i++)
+    {
+        printf("%u ", ad_stack->data[i]);
+    }
+    printf("\n");
 }
