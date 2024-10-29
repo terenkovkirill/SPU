@@ -6,7 +6,7 @@
 //#define DEBUG
 #define NO_ITEMS 0
 #define FILENAME 
-typedef uint8_t StackElem_t;
+typedef int StackElem_t;   //с uint8_t непонятный спецификатор
 typedef uint64_t Canary_t;
 
 
