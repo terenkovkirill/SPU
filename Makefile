@@ -2,26 +2,29 @@ CC=g++
 CFLAGS=-c -Wall 
 
 .PHONY: build
-build: main.exe ASM.exe
+build: Proc.exe Asm.exe
 
 
-ASM.exe: ASM.o 
-	$(CC) ASM.o -o ASM.exe
+Asm.exe: Asm.o Read.o
+	$(CC) Asm.o Read.o -o Asm.exe 
 
-ASM.o: ASM.cpp Makefile
-	$(CC) $(CFLAGS) ASM.cpp
+Asm.o: Asm.cpp Makefile
+	$(CC) $(CFLAGS) Asm.cpp
 
-.PHONY: runASM
-runASM: ASM.exe
-	./ASM.exe PROGRAM_ASM.TXT PROGRAM_CODE.TXT
+Read.o: Read.cpp Makefile
+	$(CC) $(CFLAGS) Read.cpp
+
+.PHONY: runAsm
+runASM: Asm.exe
+	./Asm.exe PROGRAM_ASM.TXT PROGRAM_CODE.TXT
 
 
 
-main.exe: main.o Stack.o Checkout.o
-	$(CC) main.o Stack.o Checkout.o -o main.exe
+Proc.exe: Proc.o Stack.o Checkout.o Read.o
+	$(CC) Proc.o Stack.o Checkout.o Read.o -o Proc.exe
 
-main.o: main.cpp Makefile
-	$(CC) $(CFLAGS) main.cpp
+Proc.o: Proc.cpp Makefile
+	$(CC) $(CFLAGS) Proc.cpp
 
 Stack.o: Stack.cpp Makefile
 	$(CC) $(CFLAGS) Stack.cpp
@@ -29,6 +32,9 @@ Stack.o: Stack.cpp Makefile
 Checkout.o: Checkout.cpp Makefile
 	$(CC) $(CFLAGS) Checkout.cpp
 
-.PHONY: runMain
-runMain: main.exe
-	./main.exe PROGRAM_CODE.TXT Log.txt
+Read.o: Read.cpp Makefile
+	$(CC) $(CFLAGS) Read.cpp
+
+.PHONY: runProc
+runMain: Proc.exe
+	./Proc.exe PROGRAM_CODE.TXT Log.txt
