@@ -69,7 +69,7 @@ StackErr_t StackError(struct Stack_t *ad_stack)
 }
 
 
-StackErr_t StackDump(struct Stack_t *ad_stack, const char* file, int line)         //фигово написано
+StackErr_t StackDump(struct Stack_t *ad_stack, const char* file, int line)
 {
     if (ad_stack == NULL) 
     {
@@ -90,7 +90,7 @@ StackErr_t StackDump(struct Stack_t *ad_stack, const char* file, int line)      
     fprintf(
         ad_stack->dump_file,
         "Stack_t [0x%p] \n"
-        "  caed from %s : %d \n"
+        "  called from %s : %d \n"
         ON_DEBUG("  name %s born at %s : %d \n")
         "  { \n"
         "      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = %I64d \n"

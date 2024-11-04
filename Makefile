@@ -16,7 +16,7 @@ Read.o: Read.cpp Makefile
 
 .PHONY: runAsm
 runASM: Asm.exe
-	./Asm.exe PROGRAM_ASM.TXT PROGRAM_CODE.TXT
+	./Asm.exe PROGRAM_ASM.TXT PROGRAM_CODE.BIN
 
 
 
@@ -32,9 +32,7 @@ Stack.o: Stack.cpp Makefile
 Checkout.o: Checkout.cpp Makefile
 	$(CC) $(CFLAGS) Checkout.cpp
 
-Read.o: Read.cpp Makefile
-	$(CC) $(CFLAGS) Read.cpp
 
 .PHONY: runProc
-runMain: Proc.exe
-	./Proc.exe PROGRAM_CODE.TXT Log.txt
+runProc: Proc.exe
+	./Proc.exe PROGRAM_CODE.BIN Log.txt

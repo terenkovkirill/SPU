@@ -60,7 +60,6 @@ void FillPoisonValue(struct Stack_t *ad_stack);
 void StackPush(struct Stack_t *ad_stack, StackElem_t elem);
 void StackPop(struct Stack_t *ad_stack, StackElem_t* x);
 void StackDestructor(struct Stack_t *ad_stack);
-void PrintStack(struct Stack_t *ad_stack);
 void StackAssertFunc(struct Stack_t *ad_stack /*, const char* file, int line*/);
 
 #endif

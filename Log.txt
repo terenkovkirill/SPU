@@ -1,0 +1,255 @@
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 0 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 0 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = -1 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = -1 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = -2 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = -2 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = -1 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3739147181 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = -1 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3739147181 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = -2 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3739147181 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = -2 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3739147181 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = -3 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3739147181 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = -3 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3739147181 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = -2 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3739147181 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = -2 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3739147181 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEB8] 
+  called from Checkout.cpp : 16 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = -3 
+      data[0x00AE70E0] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3739147181 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 

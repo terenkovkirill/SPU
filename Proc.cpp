@@ -16,77 +16,119 @@ int main(int argc, const char* argv[])  //файлы для считывания
         printf("Erroneous number of elements");
         return 0 ;
     }
+    
+    struct Processors proc = CreatCodeArray(argv[1]);
 
-    struct FileData proc = ReadingFile(argv[1]);
+    Stack_t proc_stk = {};
 
-    Processor(argv[2], &proc);
+    proc.stk = &proc_stk;                       //правильная ли это инициализация структуры
+    StackCtor(proc.stk, 2, argv[2]);
 
+    proc.ip = 0; 
+
+    Processor(&proc); 
+    
+    for (int i = 0; i < 13; i++) {
+        printf("code[%d] = %d \n", i, proc.code[i]);
+    }
+    
     return 0;
 }
 
 
-void Processor(const char* log_file, struct FileData *proc)   //в чём отличие записи в аргументах code[]  и code
+void Processor(struct Processors *proc)  
 {
-    Stack_t stk = {};
+    while(proc->code[proc->ip] != HLT)     
+    {
+        switch (proc->code[proc->ip]) {                 //в чём отличие case с фигурными скобками и без них  !
+            case CONVERS(PUSH): {
+                StackPush(proc->stk, GetArgPush(proc));
+                break;
+            }
 
-    StackCtor(&stk, 2, log_file);
-
-    int ip = 0;     //продвинутая версия
-
-    while(ip < proc->count_commands)     
-    {  
-        switch ((int)proc->dinamic_text[ip]) {                 //в чём отличие case с фигурными скобками и без них
-            case PUSH: {
-                StackPush(&stk, (int)proc->dinamic_text[ip + 1]);
-                ip += 1;
+            case CONVERS(POP): {
+                StackElem_t* addr = GetArgPop(proc);
+                StackPop(proc->stk, addr);
                 break;
             }
 
             case SUB: {
                 StackElem_t value1, value2;
-                StackPop(&stk, &value1);
-                StackPop(&stk, &value2);
-                StackPush(&stk, value1 - value2);
-                ip += 1;
+                StackPop(proc->stk, &value1);
+                StackPop(proc->stk, &value2);
+                StackPush(proc->stk, value1 - value2);
+                proc->ip += 1;
                 break;
             }
 
             case ADD: {
                 StackElem_t value1, value2;
-                StackPop(&stk, &value1);
-                StackPop(&stk, &value2);
-                StackPush(&stk, value1 + value2);
-                ip += 1;
+                StackPop(proc->stk, &value1);
+                StackPop(proc->stk, &value2);
+                StackPush(proc->stk, value1 + value2);
+                proc->ip += 1;
                 break;
             }
             
             case MUL: {
                 StackElem_t value1, value2;
-                StackPop(&stk, &value1);
-                StackPop(&stk, &value2);
-                StackPush(&stk, value1 * value2);
-                ip += 1;
+                StackPop(proc->stk, &value1);
+                StackPop(proc->stk, &value2);
+                StackPush(proc->stk, value1 * value2);
+                proc->ip += 1;
                 break;
             }
 
             case OUTPUT: {
                 StackElem_t value = 0;
-                StackPop(&stk, &value);
+                StackPop(proc->stk, &value);
                 printf("%d", value);
-                ip += 1;
+                proc->ip += 1;
                 break;
-            }
+            }                      
             
             case HLT:
                 break;
 
             default: 
-                printf("SNTXERR: %d \n", (int)proc->dinamic_text[ip]);
+                printf("SNTXERR: %d \n", proc->code[proc->ip++]);
                 break;      
         }
 
-    PrintStack(&stk);
+    PrintStack(proc->stk);
     }
+}
+
+int GetArgPush(struct Processors *proc)
+{
+    int cmd = proc->code[proc->ip++]; 
+
+    if (cmd & DATA_ARG)
+        return proc->code[proc->ip++];
+    
+    if (cmd & REG_ARG)
+        return proc->regs[proc->code[proc->ip++]];
+    
+    // if (cmd & SUM_ARG)
+    //     return proc->regs[proc->code[proc->ip++]] + proc->code[proc->ip++];
+
+    // if (argType & 4)
+    //     result = RAM[result];
+
+    return 1;                   //это надо поправить
+}
+
+int* GetArgPop(struct Processors *proc)
+{
+    int cmd = proc->code[proc->ip++]; 
+    
+    if (cmd & REG_ARG)                                      //берёт число из стека и записывает его в регистр
+        return &(proc->regs[proc->code[proc->ip++]]);       //возврает адрес ячейки в массиве регистров
+
+    // if (cmd & DATA_ARG)
+    //     return куда-то в RAM;
+
+    return &(proc->regs[proc->code[proc->ip++]]);           //это тоже надо поправить
 }
 
 
@@ -100,3 +142,27 @@ void PrintStack(struct Stack_t *ad_stack)
     }
     printf("\n");
 }
+
+
+
+//elfkb |nj elfkb elfkb |nj elfkb
+/*
+
+in
+pushr bx  ; stack: bx
+push -1 ; stack: bx, -1
+mul     ; stack: -bx
+in
+pushr ax  ; stack: - bx, ax
+div     ; stack: 
+out     ; stack: 
+hlt
+
+
+TODO:
+1 Pushr ax, push bx  в процессоре и асме
+2 Написать pop (выпопливает ax из массива регисторов)
+3 Написать jump
+4 Написать прогу, считающую сумму квадратов от 1 до 3.
+*/
+

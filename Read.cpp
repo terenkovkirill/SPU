@@ -6,8 +6,9 @@
 #include <sys/stat.h>
 
 #include "Read.h"
+#include "Proc.h"           // Нужно подключать только для чтения файла в процессоре!
 
-struct FileData ReadingFile(const char *file_name)               //  ReadFile считывает данные из файла и запихивает нужные значения в структуру
+struct FileData ReadFile(const char *file_name)               //  ReadFile считывает данные из файла и запихивает нужные значения в структуру
 {
     FILE *program_asm = fopen(file_name, "rb");
     assert(program_asm != NULL);
@@ -36,6 +37,22 @@ struct FileData ReadingFile(const char *file_name)               //  ReadFile с
 }
 
 
+struct Processors CreatCodeArray(const char *file_name)               //  ReadFile считывает данные из файла и запихивает нужные значения в структуру
+{                                                                     //  Поработать над названием
+    FILE *program_code = fopen(file_name, "rb");
+    assert(program_code != NULL);
+
+    long file_len = CalculationLen(program_code);
+
+    int* buffer = (int *)calloc(file_len, sizeof(char));
+    fread(buffer, sizeof(char), file_len, program_code);           //считываем файл в Buffer
+    fclose(program_code);
+
+    struct Processors data;
+    data.code = buffer;
+
+    return data;
+}
 
 
 int CalculationLen(FILE *text_file)            //вычисляем длину файла
