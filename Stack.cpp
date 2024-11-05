@@ -67,7 +67,7 @@ void StackPop(struct Stack_t *ad_stack, StackElem_t* x)
 {
     STACK_ASSERT(ad_stack);
     
-    *x = ad_stack->data[ad_stack->size];
+    *x = ad_stack->data[ad_stack->size-1];
     ad_stack->size--;
     
     STACK_ASSERT(ad_stack);

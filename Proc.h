@@ -8,7 +8,7 @@
 
 const int NUM_REGS = 3;
 
-struct Processors
+struct SPU
 {
     int* code;
     int regs[NUM_REGS];
@@ -17,12 +17,11 @@ struct Processors
 };
 
 
+//#define CONVERS(opcode) (opcode & OPCODE_MSK) 
 
-#define CONVERS(opcode) (opcode & OPCODE_MSK) 
-
-void Processor(struct Processors *proc);
+void Processor(struct SPU *proc);
 void PrintStack(struct Stack_t *ad_stack);
-int* GetArgPop(struct Processors *proc);
-int GetArgPush(struct Processors *proc);
+int* GetArgPop(struct SPU *proc);
+int GetArgPush(struct SPU *proc);
 
 #endif

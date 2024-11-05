@@ -37,7 +37,7 @@ struct FileData ReadFile(const char *file_name)               //  ReadFile сч�
 }
 
 
-struct Processors CreatCodeArray(const char *file_name)               //  ReadFile считывает данные из файла и запихивает нужные значения в структуру
+struct SPU CreatCodeArray(const char *file_name)               //  ReadFile считывает данные из файла и запихивает нужные значения в структуру
 {                                                                     //  Поработать над названием
     FILE *program_code = fopen(file_name, "rb");
     assert(program_code != NULL);
@@ -48,7 +48,7 @@ struct Processors CreatCodeArray(const char *file_name)               //  ReadFi
     fread(buffer, sizeof(char), file_len, program_code);           //считываем файл в Buffer
     fclose(program_code);
 
-    struct Processors data;
+    struct SPU data;
     data.code = buffer;
 
     return data;

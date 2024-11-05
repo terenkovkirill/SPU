@@ -84,10 +84,13 @@ void Assembler(struct FileData *asmb, const char* filename)
     while(1)
     {
         int num_param = sscanf(asmb->dinamic_text[cur_cmd], "%s %d", cmd, &arg);
-
+        
         if (strcmp(cmd, "push") == 0) {
+
+            code[ip++] = PUSH;
+
             if (num_param == 2) {
-                code[ip++] = (PUSH & OPCODE_MSK) | (ARG_TYPE_MSK & DATA_ARG);
+                code[ip++] = STACK_ARG;
                 code[ip++] = arg;
             }
             
@@ -100,8 +103,11 @@ void Assembler(struct FileData *asmb, const char* filename)
         }
 
         else if (strcmp(cmd, "pop") == 0) {
+
+            code[ip++] = POP;
+
             if (num_param == 2) {
-                code[ip++] = (POP & OPCODE_MSK) | (DATA_ARG & ARG_TYPE_MSK);
+                code[ip++] = STACK_ARG;
                 code[ip++] = arg;
             }
             
@@ -156,18 +162,28 @@ void Assembler(struct FileData *asmb, const char* filename)
 
     fwrite(code, sizeof(int), ip, program_code);
 
+    // int cur_ind = 0;            //для текстового файла и отладки на нём 
+    // while(1)
+    // {
+    //     fprintf(program_code, "%d \n", code[cur_ind]);
+    //     if (code[cur_ind] == HLT)
+    //         break;
+        
+    //     cur_ind++;
+    // }
+
     fclose(program_code);
 }
 
 void ReadPushArgType(char* cmd2, int* code, int* ip)
 {
     if (strcmp(cmd2, "ax") == 0) {
-        code[(*ip)++] = (PUSH & OPCODE_MSK) | (REG_ARG & ARG_TYPE_MSK);
+        code[(*ip)++] = REG_ARG;
         code[(*ip)++] = AX;
     }
 
     else if (strcmp(cmd2, "bx") == 0) {
-        code[(*ip)++] = (PUSH & OPCODE_MSK) | (REG_ARG & ARG_TYPE_MSK);
+        code[(*ip)++] = REG_ARG;
         code[(*ip)++] = BX;
     }
 
@@ -180,12 +196,12 @@ void ReadPushArgType(char* cmd2, int* code, int* ip)
 void ReadPopArgType(char* cmd2, int* code, int* ip)
 {
     if (strcmp(cmd2, "ax") == 0) {
-        code[(*ip)++] = (POP & OPCODE_MSK) | (REG_ARG & ARG_TYPE_MSK);
+        code[(*ip)++] = REG_ARG;
         code[(*ip)++] = AX;
     }
 
     else if (strcmp(cmd2, "bx") == 0) {
-        code[(*ip)++] = (POP & OPCODE_MSK) | (REG_ARG & ARG_TYPE_MSK);
+        code[(*ip)++] = REG_ARG;
         code[(*ip)++] = BX;
     }
 
