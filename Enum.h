@@ -8,12 +8,14 @@ enum Command {
     DIV = 4,                //division = деление
     OUTPUT = 5,
     MUL = 7,                //multiplication = умножение
-    JB = 9,
     POP = 10,
-    PUSH_AX = 11,
-    PUSH_BX =12,
-    POP_AX = 13,
-    POP_BX = 14,
+    JMP = 11,
+    JA = 12,
+    JB = 13,
+    JE = 14,
+    JAE = 15,
+    JBE = 16,
+    JNE = 17,
     HLT = 0                 //halt = остановка
 };
 
@@ -23,10 +25,10 @@ enum RegTypes {
 };
 
 enum PushPopTypes {
-    STACK_ARG = 1,
-    REG_ARG = 2,
-    SUM_ARG = 3,
-    RAM_ARG = 4
+    STACK_ARG = 0b00000001,
+    REG_ARG   = 0b00000010,
+    SUM_ARG   = 0b00000100,
+    RAM_ARG   = 0b00001000
 };
 
 // enum CommandTypeMasks {

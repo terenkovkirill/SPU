@@ -19,16 +19,13 @@ int main(int argc, const char* argv[])  //файлы для считывания
     
     struct SPU proc = CreatCodeArray(argv[1]);
 
-    Stack_t proc_stk = {};
-
-    proc.stk = &proc_stk;                       //правильная ли это инициализация структуры
-    StackCtor(proc.stk, 2, argv[2]);
+    STACK_CTOR(&proc.stk, 2, argv[2]);
 
     proc.ip = 0; 
 
     Processor(&proc); 
     
-    for (int i = 0; i < 13; i++) {
+    DBG for (int i = 0; i < proc.ip; i++) {                //здесь значение ip = число элементов в массиве code
         printf("code[%d] = %d \n", i, proc.code[i]);
     }
     
@@ -40,62 +37,121 @@ void Processor(struct SPU *proc)
 {
     while(proc->code[proc->ip] != HLT)     
     {
-        printf("case: %d \n", proc->code[proc->ip]);
+        DBG printf("case: %d \n", proc->code[proc->ip]);
 
         switch (proc->code[proc->ip]) {                 //в чём отличие case с фигурными скобками и без них  !
             case PUSH: {
-                StackPush(proc->stk, GetArgPush(proc));
+                StackPush(&proc->stk, GetArgPush(proc));
                 break;
             }
 
             case POP: {
                 StackElem_t* addr = GetArgPop(proc);
-                StackPop(proc->stk, addr);
+                StackPop(&proc->stk, addr);
                 break;
             }
 
             case SUB: {
                 StackElem_t value1, value2;
-                StackPop(proc->stk, &value1);
-                StackPop(proc->stk, &value2);
-                StackPush(proc->stk, value2 - value1);
+                StackPop(&proc->stk, &value1);
+                StackPop(&proc->stk, &value2);
+                StackPush(&proc->stk, value2 - value1);
                 proc->ip += 1;
                 break;
             }
 
             case ADD: {
                 StackElem_t value1, value2;
-                StackPop(proc->stk, &value1);
-                StackPop(proc->stk, &value2);
-                printf("--ADD: value1 = %d, value2 = %d, value1 + value2 = %d \n", value1, value2, value1 + value2);
-                StackPush(proc->stk, value1 + value2);
+                StackPop(&proc->stk, &value1);
+                StackPop(&proc->stk, &value2);
+                DBG printf("--ADD: value1 = %d, value2 = %d, value1 + value2 = %d \n", value1, value2, value1 + value2);
+                StackPush(&proc->stk, value1 + value2);
                 proc->ip += 1;
                 break;
             }
             
             case MUL: {
                 StackElem_t value1, value2;
-                StackPop(proc->stk, &value1);
-                StackPop(proc->stk, &value2);
-                StackPush(proc->stk, value1 * value2);
-                printf("--MUL: value1 = %d, value2 = %d, value1 * value2 = %d \n", value1, value2, value1 * value2);
+                StackPop(&proc->stk, &value1);
+                StackPop(&proc->stk, &value2);
+                StackPush(&proc->stk, value1 * value2);
+                DBG printf("--MUL: value1 = %d, value2 = %d, value1 * value2 = %d \n", value1, value2, value1 * value2);
                 proc->ip += 1;
                 break;
             }
 
             case DIV: {
                 StackElem_t value1, value2;
-                StackPop(proc->stk, &value1);
-                StackPop(proc->stk, &value2);
-                StackPush(proc->stk, value2 / value1);
-                printf("--DIV: value1 = %d, value2 = %d, value1 / value2 = %d \n", value1, value2, value1 / value2);
+                StackPop(&proc->stk, &value1);
+                StackPop(&proc->stk, &value2);
+                StackPush(&proc->stk, value2 / value1);
+                DBG printf("--DIV: value1 = %d, value2 = %d, value1 / value2 = %d \n", value1, value2, value1 / value2);
                 proc->ip += 1;
                 break;
             } 
 
+            case JMP: {
+                proc->ip = proc->code[++proc->ip];
+                break;
+            }
+
+            case JA: {                              //если первый push > второго (т. е. первый pop < второго)
+                StackElem_t value1, value2;
+                StackPop(&proc->stk, &value1);
+                StackPop(&proc->stk, &value2);
+                if (value1 < value2)
+                    proc->ip = proc->code[++proc->ip];
+                break;
+            }
+
+            case JB: { 
+                StackElem_t value1, value2;
+                StackPop(&proc->stk, &value1);
+                StackPop(&proc->stk, &value2);
+                if (value1 > value2)
+                    proc->ip = proc->code[++proc->ip];
+                break;
+            }
+
+            case JE: { 
+                StackElem_t value1, value2;
+                StackPop(&proc->stk, &value1);
+                StackPop(&proc->stk, &value2);
+                if (value1 == value2)
+                    proc->ip = proc->code[++proc->ip];
+                break;
+            }
+
+            case JAE: { 
+                StackElem_t value1, value2;
+                StackPop(&proc->stk, &value1);
+                StackPop(&proc->stk, &value2);
+                if (value1 <= value2)
+                    proc->ip = proc->code[++proc->ip];
+                break;
+            }
+
+            case JBE: { 
+                StackElem_t value1, value2;
+                StackPop(&proc->stk, &value1);
+                StackPop(&proc->stk, &value2);
+                if (value1 >= value2)
+                    proc->ip = proc->code[++proc->ip];
+                break;
+            }
+
+            case JNE: { 
+                StackElem_t value1, value2;
+                StackPop(&proc->stk, &value1);
+                StackPop(&proc->stk, &value2);
+                if (value1 != value2)
+                    proc->ip = proc->code[++proc->ip];
+                break;
+            }
+
             case OUTPUT: {
                 StackElem_t value = 0;
-                StackPop(proc->stk, &value);
+                StackPop(&proc->stk, &value);
                 printf("--OUTPUT: %d \n", value);
                 proc->ip += 1;
                 break;
@@ -109,7 +165,7 @@ void Processor(struct SPU *proc)
                 break;      
         }
 
-        PrintStack(proc->stk);
+        DBG PrintStack(&proc->stk);
     }
 
 
@@ -192,4 +248,28 @@ TODO:
     считывание в файл 
     /r /n
     режимы открытия файлов w , wb
+    макрос для принтов
 */
+
+
+
+
+/*
+Простая прога для assembler:
+push 30
+push 70
+add
+push 80
+push 60
+sub
+div
+out
+hlt
+*/
+
+
+
+
+//На завтра: отладить сегфолты в ассемблере
+//           заняться отладкой процессора, учитывая, что 
+//                                          могут возникнуть проблемы с выводом массива код в цикле for

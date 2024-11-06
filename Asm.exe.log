@@ -1,0 +1,280 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\KirillT\Desktop\SPU\Asm.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x771D4937. Попытка записать данные по адресу NULL в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x0055569C (32-bit), Flags: Cmdre0, Thread: 0x16EC (Main), GetLastError(): 183 (?????????? ??????? ????, ??? ??? ?? ??? ??????????). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\kirillt\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  7 2024 00:47:30, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 07 2024 00:47:46
+
+Run file:	C:\Users\KirillT\Desktop\SPU\Asm.exe
+Directory:	C:\Users\KirillT\Desktop\SPU
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\KirillT\Desktop\SPU\Asm.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x771D4937. Попытка записать данные по адресу NULL в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x0055569C (32-bit), Flags: Cmdre0, Thread: 0x16EC (Main), GetLastError(): 183 (?????????? ??????? ????, ??? ??? ?? ??? ??????????). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\kirillt\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  7 2024 00:47:30, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 07 2024 00:47:47
+
+Run file:	C:\Users\KirillT\Desktop\SPU\Asm.exe
+Directory:	C:\Users\KirillT\Desktop\SPU
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\KirillT\Desktop\SPU\Asm.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0041D368. Попытка записать данные по адресу 0x0000000E в модуле C:\Users\KirillT\Desktop\SPU\Asm.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x0055569C (32-bit), Flags: Cmdre0, Thread: 0xFB8 (Main), GetLastError(): 183 (?????????? ??????? ????, ??? ??? ?? ??? ??????????). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\kirillt\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  7 2024 00:53:47, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 07 2024 00:54:04
+
+Run file:	C:\Users\KirillT\Desktop\SPU\Asm.exe
+Directory:	C:\Users\KirillT\Desktop\SPU
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\KirillT\Desktop\SPU\Asm.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0041D368. Попытка записать данные по адресу 0x0000000E в модуле C:\Users\KirillT\Desktop\SPU\Asm.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x0055569C (32-bit), Flags: Cmdre0, Thread: 0xFB8 (Main), GetLastError(): 183 (?????????? ??????? ????, ??? ??? ?? ??? ??????????). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\kirillt\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  7 2024 00:53:47, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 07 2024 00:54:04
+
+Run file:	C:\Users\KirillT\Desktop\SPU\Asm.exe
+Directory:	C:\Users\KirillT\Desktop\SPU
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\KirillT\Desktop\SPU\Asm.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0041D3F0. Попытка записать данные по адресу 0x0000000E в модуле C:\Users\KirillT\Desktop\SPU\Asm.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x0055569C (32-bit), Flags: Cmdre0, Thread: 0x397C (Main), GetLastError(): 183 (?????????? ??????? ????, ??? ??? ?? ??? ??????????). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\kirillt\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  7 2024 00:57:16, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 07 2024 00:57:32
+
+Run file:	C:\Users\KirillT\Desktop\SPU\Asm.exe
+Directory:	C:\Users\KirillT\Desktop\SPU
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\KirillT\Desktop\SPU\Asm.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0041D3F0. Попытка записать данные по адресу 0x0000000E в модуле C:\Users\KirillT\Desktop\SPU\Asm.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x0055569C (32-bit), Flags: Cmdre0, Thread: 0x397C (Main), GetLastError(): 183 (?????????? ??????? ????, ??? ??? ?? ??? ??????????). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\kirillt\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  7 2024 00:57:16, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 07 2024 00:57:32
+
+Run file:	C:\Users\KirillT\Desktop\SPU\Asm.exe
+Directory:	C:\Users\KirillT\Desktop\SPU
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\KirillT\Desktop\SPU\Asm.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0041D434. Попытка записать данные по адресу 0x0000000E в модуле C:\Users\KirillT\Desktop\SPU\Asm.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x0055569C (32-bit), Flags: Cmdre0, Thread: 0x3BC0 (Main), GetLastError(): 183 (?????????? ??????? ????, ??? ??? ?? ??? ??????????). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\kirillt\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  7 2024 01:50:55, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 07 2024 01:51:09
+
+Run file:	C:\Users\KirillT\Desktop\SPU\Asm.exe
+Directory:	C:\Users\KirillT\Desktop\SPU
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\KirillT\Desktop\SPU\Asm.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0041D434. Попытка записать данные по адресу 0x0000000E в модуле C:\Users\KirillT\Desktop\SPU\Asm.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x0055569C (32-bit), Flags: Cmdre0, Thread: 0x3BC0 (Main), GetLastError(): 183 (?????????? ??????? ????, ??? ??? ?? ??? ??????????). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\kirillt\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  7 2024 01:50:55, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, Debug
+Started:	Nov 07 2024 01:51:09
+
+Run file:	C:\Users\KirillT\Desktop\SPU\Asm.exe
+Directory:	C:\Users\KirillT\Desktop\SPU
+
+--------------------------------------------------

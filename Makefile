@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-c -Wall 
+CFLAGS=-c -Wall -DDEBUG
 
 .PHONY: build
 build: Proc.exe Asm.exe

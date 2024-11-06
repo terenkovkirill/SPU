@@ -13,8 +13,17 @@ struct SPU
     int* code;
     int regs[NUM_REGS];
     int ip;
-    Stack_t* stk;               //TODO: Stack_t stk;
+    Stack_t stk;               
 };
+
+
+#ifdef DEBUG
+    #define DBG        if(1)                //что это значит  !
+    #define dbg(...) __VA_ARGS__
+#else
+    #define DBG        if(0)
+    #define dbg(...)
+#endif
 
 
 //#define CONVERS(opcode) (opcode & OPCODE_MSK) 
