@@ -1,4 +1,4 @@
-#include <TXLib.h>
+//#include <TXLib.h>
 #include <stdio.h>
 #include <string.h>
 #include <assert.h>
@@ -12,8 +12,8 @@ const int NUM_LABELS = 100;
 
 void Assembler(struct FileData *asmb, const char* filename);
 void ReadArgType(char*cmd, char* cmd2, int* code, int* ip);
-void FillArrayLabels(struct FileData* asmb, struct Labels* labels[]);
-void PutLabels(char* cmd, char* cmd2, int* code, int* ip, struct Labels* labels[]);
+void FillArrayLabels(struct FileData* asmb, struct Labels* labels);
+void PutLabels(char* cmd, char* cmd2, int* code, int* ip, struct Labels* labels);
 
 struct Labels 
 {
@@ -50,19 +50,22 @@ void Assembler(struct FileData *asmb, const char* filename)
 
     int ip = 0, cur_cmd = 0;
     int code[asmb->count_commands * 2];      //фиговое объявление массива!
+    printf("1 \n");
 
     struct Labels labels[NUM_LABELS];
-    FillArrayLabels(asmb, (Labels **)labels);       //правильно ли передаю массив структур
+    //printf("%p \n", labels);
+    FillArrayLabels(asmb, labels);       //правильно ли передаю массив структур
+    //printf("2 \n");
 
     char cmd[50] = "";             //name of command
     char cmd2[50] = "";            //type of command
     int arg = 0;                   //integer argument of command
 
-    while(1)
+    while(1)                                //это надо поправить
     {
         int num_param = sscanf(asmb->dinamic_text[cur_cmd], "%s %d", cmd, &arg);
-
-        if (strchr(cmd, ':') == NULL) 
+        //printf("-%s- \n", cmd);
+        if (strchr(cmd, ':') != NULL) 
         {
             continue;
         }
@@ -70,7 +73,7 @@ void Assembler(struct FileData *asmb, const char* filename)
         if (strcmp(cmd, "push") == 0) {
 
             code[ip++] = PUSH;
-
+            //printf("taraban \n");
             if (num_param == 2) {
                 code[ip++] = STACK_ARG;
                 code[ip++] = arg;
@@ -129,49 +132,49 @@ void Assembler(struct FileData *asmb, const char* filename)
         else if (strcmp(cmd, "jmp") == 0){
             code[ip++] = JMP;
             sscanf(asmb->dinamic_text[cur_cmd], "%s %s", cmd, cmd2);
-            PutLabels(cmd, cmd2, code, &ip, (Labels **)labels);
+            PutLabels(cmd, cmd2, code, &ip, labels);
             cur_cmd++;
         }
 
         else if (strcmp(cmd, "ja") == 0){
             code[ip++] = JA;
             sscanf(asmb->dinamic_text[cur_cmd], "%s %s", cmd, cmd2);
-            PutLabels(cmd, cmd2, code, &ip, (Labels **)labels);
+            PutLabels(cmd, cmd2, code, &ip, labels);
             cur_cmd++;
         }
 
         else if (strcmp(cmd, "jb") == 0){
             code[ip++] = JB;
             sscanf(asmb->dinamic_text[cur_cmd], "%s %s", cmd, cmd2);
-            PutLabels(cmd, cmd2, code, &ip, (Labels **)labels);
+            PutLabels(cmd, cmd2, code, &ip, labels);
             cur_cmd++;
         }
 
         else if (strcmp(cmd, "je") == 0){
             code[ip++] = JE;
             sscanf(asmb->dinamic_text[cur_cmd], "%s %s", cmd, cmd2);
-            PutLabels(cmd, cmd2, code, &ip, (Labels **)labels);
+            PutLabels(cmd, cmd2, code, &ip, labels);
             cur_cmd++;
         }
 
         else if (strcmp(cmd, "jae") == 0){
             code[ip++] = JAE;
             sscanf(asmb->dinamic_text[cur_cmd], "%s %s", cmd, cmd2);
-            PutLabels(cmd, cmd2, code, &ip, (Labels **)labels);
+            PutLabels(cmd, cmd2, code, &ip, labels);
             cur_cmd++;
         }
 
         else if (strcmp(cmd, "jbe") == 0){
             code[ip++] = JBE;
             sscanf(asmb->dinamic_text[cur_cmd], "%s %s", cmd, cmd2);
-            PutLabels(cmd, cmd2, code, &ip, (Labels **)labels);
+            PutLabels(cmd, cmd2, code, &ip, labels);
             cur_cmd++;
         }
 
         else if (strcmp(cmd, "jne") == 0){
             code[ip++] = JNE;
             sscanf(asmb->dinamic_text[cur_cmd], "%s %s", cmd, cmd2);
-            PutLabels(cmd, cmd2, code, &ip, (Labels **)labels);
+            PutLabels(cmd, cmd2, code, &ip, labels);
             cur_cmd++;
         }
 
@@ -221,18 +224,18 @@ void ReadArgType(char* cmd, char* cmd2, int* code, int* ip)
 }
 
 
-void PutLabels(char* cmd, char* cmd2, int* code, int* ip, struct Labels* labels[])
+void PutLabels(char* cmd, char* cmd2, int* code, int* ip, struct Labels* labels)
 {
     assert(labels != NULL);     
     assert(code != NULL);           //нужны ли ещё assert !
     assert(cmd != NULL);
 
     int cnt = 0;
-    while (strcmp(labels[cnt]->name, "0") != 0)
+    while (strcmp(labels[cnt].name, "0") != 0)
     {
-        if (strcmp(cmd2, labels[cnt]->name))
+        if (strcmp(cmd2, labels[cnt].name))
         {
-            code[(*ip)++] = labels[cnt]->index;  
+            code[(*ip)++] = labels[cnt].index;  
             return;
         }
     }
@@ -241,18 +244,21 @@ void PutLabels(char* cmd, char* cmd2, int* code, int* ip, struct Labels* labels[
 }
 
 
-void FillArrayLabels(struct FileData* asmb, struct Labels* labels[])
+void FillArrayLabels(struct FileData* asmb, struct Labels* labels)
 {
     assert(asmb != NULL);
     assert(labels != NULL);
-    while(1) 
+
+    int cur_line = 0;
+
+    while(1)                        //это надо поправить
     {
-        int cur_cmd = 0, ip = 0, cur_label = 0;
+        int ip = 0, cur_label = 0;
         int arg = 0;
         char str1[50];
         char str2[50];
 
-        if (sscanf(asmb->dinamic_text[cur_cmd], "%s %d", str1, &arg) == 2) 
+        if (sscanf(asmb->dinamic_text[cur_line], "%s %d", str1, &arg) == 2) 
         {
             ip += 2;                                //считали команду(строку) и число
         }
@@ -261,12 +267,12 @@ void FillArrayLabels(struct FileData* asmb, struct Labels* labels[])
         {
             if (strchr(str1, ':') != NULL)
             {
-                strcpy(labels[cur_label]->name, str1);
-                labels[cur_label]->index = ip + 1;
+                strcpy(labels[cur_label].name, str1);
+                labels[cur_label].index = ip + 1;
                 cur_label++;
             }
 
-            int num_param = sscanf(asmb->dinamic_text[cur_cmd], "%s %s", str1, str2);
+            int num_param = sscanf(asmb->dinamic_text[cur_line], "%s %s", str1, str2);
 
             if (num_param == 2)                     //считали 2 строки
                 ip += 2;
@@ -275,12 +281,14 @@ void FillArrayLabels(struct FileData* asmb, struct Labels* labels[])
                 ip += 1;
         }
 
-        strcpy(labels[cur_label]->name, "0");           //делаем последний элемент массива структур нулём
-        labels[cur_label]->index = 0;
+        strcpy(labels[cur_label].name, "0");           //делаем последний элемент массива структур нулём
+        labels[cur_label].index = 0;
 
         if (strcmp(str1, "hlt") == 0) {
             break;
         }
+
+        cur_line++;
     }
 }
 
@@ -300,3 +308,11 @@ void FillArrayLabels(struct FileData* asmb, struct Labels* labels[])
 
 
 ///////DFGDS
+
+
+
+
+
+
+
+//сравниваю строку в цикле, если сравнение прошло, то возвращаю соответствующий opCode, дальше свитч

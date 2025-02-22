@@ -6,11 +6,583 @@ Stack_t [0x0087FEC8]
       THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
       capacity = 2 
       size = 0 
-      data[0x01377100] 
+      data[0x013B7158] 
       THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
       THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
       { 
            [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 0 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 1 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+          *[i] = 30 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 1 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+          *[i] = 30 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 2 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+          *[i] = 30 
+          *[i] = 70 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 2 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+          *[i] = 30 
+          *[i] = 70 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 1 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+          *[i] = 30 
+          *[i] = 70 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 1 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+          *[i] = 30 
+          *[i] = 70 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 0 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+          *[i] = 30 
+          *[i] = 70 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 0 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+          *[i] = 30 
+          *[i] = 70 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 1 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+          *[i] = 100 
+          *[i] = 70 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 1 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+          *[i] = 100 
+          *[i] = 70 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 2 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+          *[i] = 100 
+          *[i] = 80 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 2 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+          *[i] = 100 
+          *[i] = 80 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 2 
+      size = 2 
+      data[0x013B7158] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 0 
+      { 
+          *[i] = 100 
+          *[i] = 80 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 2 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 100 
+          *[i] = 80 
+           [i] = 3739147181 (POISON) 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 3 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 100 
+          *[i] = 80 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 3 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 100 
+          *[i] = 80 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 2 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 100 
+          *[i] = 80 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 2 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 100 
+          *[i] = 80 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 1 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 100 
+          *[i] = 80 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 1 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 100 
+          *[i] = 80 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 2 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 100 
+          *[i] = 20 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 2 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 100 
+          *[i] = 20 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 1 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 100 
+          *[i] = 20 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 1 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 100 
+          *[i] = 20 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 0 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 100 
+          *[i] = 20 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 0 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 100 
+          *[i] = 20 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 1 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 5 
+          *[i] = 20 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 1 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 5 
+          *[i] = 20 
+          *[i] = 60 
+           [i] = 3739147181 (POISON) 
+      } 
+  } 
+ 
+ 
+Stack_t [0x0087FEC8] 
+  called from Checkout.cpp : 16 
+  name &proc.stk born at Proc.cpp : 22 
+  { 
+      THE LEFT_CANARY_OF_THE_STACK_EQUALS  = 12246746 
+      THE RIGHT_CANARY_OF_THE_STACK_EQUALS = 12246746 
+      capacity = 4 
+      size = 0 
+      data[0x013B9190] 
+      THE LEFT_CANARY_OF_THE_DATA_EQUALS  = 3202014938 
+      THE RIGHT_CANARY_OF_THE_DATA_EQUALS = 3202014938 
+      { 
+          *[i] = 5 
+          *[i] = 20 
+          *[i] = 60 
            [i] = 3739147181 (POISON) 
       } 
   } 

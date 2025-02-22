@@ -1,6 +1,6 @@
 #ifndef READ_H
 #define READ_H
-#include <TXLib.h>
+//#include <TXLib.h>
 #include <stdio.h>
 
 
@@ -20,3 +20,4 @@ struct SPU CreatCodeArray(const char *file_name);
 
 #endif
 
+//cuijdph

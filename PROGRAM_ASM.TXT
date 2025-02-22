@@ -1,9 +1,23 @@
-push 30
-push 70
-add
-push 80
-push 60
-sub
-div
+push 0 
+pop ax
+next:
+push ax
+push ax
+mul
 out
+push ax
+push 1
+add
+pop ax
+push ax
+push 10
+ja skip:
 hlt
+skip:
+jmp next:
+
+
+
+//оперативка
+//метки без двоеточия
+//комментарии в асмб (символ собачка @)
